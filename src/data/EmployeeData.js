@@ -1,4 +1,4 @@
-export default {
+const employees= {
   employees: [
     {
       name: "Vito Corleone",
@@ -34,3 +34,5 @@ export default {
     },
   ],
 };
+
+export default employees;
