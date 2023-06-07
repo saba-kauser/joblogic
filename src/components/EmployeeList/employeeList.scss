@@ -26,7 +26,7 @@
         font-size: 2.4rem;
         font-weight: 200;
         padding: 1.2rem 0rem;
-        color: #3BD4FD;
+        color: white;
         text-overflow: ellipsis;
         white-space: unset;
         overflow: hidden;
@@ -36,6 +36,7 @@
         }
         &.active {
           background-color: #404146;
+          color: #3BD4FD;
         }
       }
     
