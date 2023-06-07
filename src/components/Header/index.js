@@ -2,7 +2,6 @@ import React from "react";
 import HeaderImage from "../../assets/_images/Header_image/Godfather_header.jpg";
 import "./header.scss";
 
-
 const Header = () => {
   return (
     <div className="header">
