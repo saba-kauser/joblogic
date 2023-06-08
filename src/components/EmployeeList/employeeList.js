@@ -2,7 +2,7 @@ import React from "react";
 import Logo from "../../assets/_logo/the-godfather.svg";
 import "./employeeList.scss";
 
-const EmployeeList = ({ currentId, employee, onChange }) => {
+const EmployeeList = ({ currentId, employee, employeeNames, onChange }) => {
   return (
     <div className="employee-list">
       <div className="employee-list__logo">
@@ -14,9 +14,8 @@ const EmployeeList = ({ currentId, employee, onChange }) => {
             <div
               key={id}
               style={{ fontSize: `${employee[id].popularity * 0.8}rem` }}
-              className={`employee-list__container__item ${
-                currentId === id && "active"
-              }`}
+              className={`employee-list__container__item
+              ${currentId === id ? "active" : "false"}`}
               onClick={onChange(id)}
             >
               {item?.name}

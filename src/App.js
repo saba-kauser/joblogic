@@ -7,13 +7,17 @@ import data from "./data/EmployeeData";
 const App = () => {
   const [currentId, setCurrentId] = useState(0);
   const [employees, setEmployees] = useState(data.employees);
+  const newData = JSON.parse(JSON.stringify(employees));
 
   const handleChangeEmployee = (id) => () => {
     setCurrentId(id);
   };
 
+  const employeeNames = newData.map((item) => {
+    return item.name;
+  });
+
   const updatePopularity = (e) => {
-    const newData = JSON.parse(JSON.stringify(employees));
     newData[currentId].popularity = Number(e.currentTarget.value);
     setEmployees(newData);
   };
@@ -24,6 +28,7 @@ const App = () => {
         currentId={currentId}
         employee={employees}
         onChange={handleChangeEmployee}
+        employeeNames={employeeNames}
       />
       <div>
         <Header />
